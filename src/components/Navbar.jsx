@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,18 +14,20 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHome = location.pathname === '/';
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container glass">
-        <div className="logo">
+        <Link to="/" className="logo">
           <span className="text-gradient">Sidhan.</span>
-        </div>
+        </Link>
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>{isHome ? <a href="#home">Home</a> : <Link to="/">Home</Link>}</li>
+          <li>{isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}</li>
+          <li>{isHome ? <a href="#skills">Skills</a> : <Link to="/#skills">Skills</Link>}</li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li>{isHome ? <a href="#contact">Contact</a> : <Link to="/#contact">Contact</Link>}</li>
         </ul>
       </div>
     </nav>

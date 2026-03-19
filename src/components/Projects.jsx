@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Projects.css';
 
 const Projects = () => {
@@ -24,9 +25,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section glass">
+    <section id="projects" className="section masterpiece-section">
       <div className="projects-container">
-        <h2 className="section-title text-gradient">Masterpiece Projects</h2>
+        <div className="section-header">
+          <h2 className="section-title text-gradient">Masterpiece Projects</h2>
+          <p className="section-subtitle">A curated selection of my most impactful work and technical breakthroughs.</p>
+        </div>
+        
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card glass">
@@ -38,10 +43,14 @@ const Projects = () => {
                     <span key={i} className="tech-tag">{t}</span>
                   ))}
                 </div>
-                <a href={project.link} className="project-link">View Project →</a>
+                <a href={project.link} className="project-link">View Details →</a>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="view-all-container">
+          <Link to="/projects" className="btn secondary">View All Projects</Link>
         </div>
       </div>
     </section>
