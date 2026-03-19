@@ -41,6 +41,41 @@
   gap: 20px;
 }
 
+.hero-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+.delay-3\.5 {
+  animation-delay: 0.7s;
+}
+
 .btn {
   padding: 14px 28px;
   border-radius: 8px;
