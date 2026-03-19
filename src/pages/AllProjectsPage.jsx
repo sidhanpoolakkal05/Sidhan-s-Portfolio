@@ -51,13 +51,14 @@ const AllProjectsPage = () => {
           <div key={index} className="project-card glass">
             <div className="project-image" style={{ backgroundImage: `url(${project.image})` }}></div>
             <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
               <div className="project-tags">
                 {project.tags.map(tag => (
                   <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <a href="#" className="project-link">View Live Project →</a>
             </div>
           </div>
         ))}

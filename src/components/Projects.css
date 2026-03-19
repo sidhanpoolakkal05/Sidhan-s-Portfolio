@@ -51,25 +51,11 @@
   height: 100%;
 }
 
-.project-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 16px;
-  color: var(--accent-color);
-}
-
-.project-info p {
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-  font-size: 1rem;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .tech-tag {
@@ -77,8 +63,14 @@
   color: var(--accent-color);
   padding: 6px 14px;
   border-radius: 30px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 .project-link {

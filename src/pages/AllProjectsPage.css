@@ -24,6 +24,9 @@
 .project-card {
   overflow: hidden;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -41,32 +44,48 @@
 
 .project-info {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-info h3 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: var(--accent-color);
+  margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 .project-info p {
   font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  letter-spacing: 1px;
 }
 
 .tag {
   background: rgba(56, 189, 248, 0.1);
   color: var(--accent-color);
-  padding: 5px 12px;
+  padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
