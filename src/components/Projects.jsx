@@ -5,32 +5,32 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Finance+Analyzer",
+      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Leaf+Disease+Detector",
+      title: "Leaf Disease Detector",
+      description: "IBM Project for detecting leaf diseases.",
+      tech: ["TypeScript", "React", "AI"],
+      link: "https://leaf-disease-detector-one.vercel.app"
+    },
+    {
+      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Contract+Management",
+      title: "Contract Management Platform",
+      description: "Task from UAE based company.",
+      tech: ["JavaScript", "React"],
+      link: "https://sidhanpoolakkal05.github.io/Contract-Management-Platform/"
+    },
+    {
+      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=AI+Resume+Analyzer",
       title: "AI Resume Analyzer",
-      description: "A deep learning powered platform to analyze resumes and suggest improvements for ATS optimization.",
-      tech: ["Python", "NLTK", "React", "Deep Learning"],
-      link: "#"
+      description: "IBM Internship project for analyzing resumes.",
+      tech: ["JavaScript", "React", "AI"],
+      link: "https://ai-resume-analyzer-dun-gamma.vercel.app"
     },
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Finance+Analyzer",
-      title: "Autonomous Robotics System",
-      description: "Simulation and control software for autonomous robotic navigation and obstacle avoidance.",
-      tech: ["Python", "Robotics", "Computer Vision", "ROS"],
-      link: "#"
-    },
-    {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Finance+Analyzer",
-      title: "E-Commerce AI Chatbot",
-      description: "Smart customer support bot with sentiment analysis and natural language understanding.",
-      tech: ["Python", "NLP", "Flask", "React"],
-      link: "#"
-    },
-    {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Finance+Analyzer",
-      title: "AI Resume Analyzer",
-      description: "A deep learning powered platform to analyze resumes and suggest improvements for ATS optimization.",
-      tech: ["Python", "NLTK", "React", "Deep Learning"],
-      link: "#"
+      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Medical+Website",
+      title: "HealthHive - The Doctor Finder",
+      description: "2nd year college project focused on finding doctors.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://sidhanpoolakkal05.github.io/Medical-Website/"
     }
   ];
 
@@ -54,7 +54,7 @@ const Projects = () => {
                 </div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href={project.link} className="project-link">View Live Project →</a>
+                <a href={project.link} className="project-link" target="_blank" rel="noreferrer">View Live Project →</a>
               </div>
             </div>
           ))}
