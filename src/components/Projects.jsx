@@ -5,21 +5,21 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Leaf+Disease+Detector",
+      image: "sidhan_portfolio\src\assets\Leaf-disease-image.png",
       title: "Leaf Disease Detector",
       description: "IBM Project for detecting leaf diseases.",
       tech: ["TypeScript", "React", "AI"],
       link: "https://leaf-disease-detector-one.vercel.app"
     },
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Contract+Management",
+      image: "sidhan_portfolio\src\assets\contract-bg.jpg",
       title: "Contract Management Platform",
       description: "Task from UAE based company.",
       tech: ["JavaScript", "React"],
       link: "https://sidhanpoolakkal05.github.io/Contract-Management-Platform/"
     },
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=AI+Resume+Analyzer",
+      image: "E:\study material\PROJECTS\sidhan_portfolio\src\assets\AI-Resume_analyzer-image.png",
       title: "AI Resume Analyzer",
       description: "IBM Internship project for analyzing resumes.",
       tech: ["JavaScript", "React", "AI"],
