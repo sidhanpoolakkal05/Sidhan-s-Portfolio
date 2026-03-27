@@ -1,26 +1,31 @@
 import React from 'react';
 import './AllProjectsPage.css';
 
+// Import project images
+import LeafDiseaseImg from '../assets/Leaf-disease-image.png';
+import ContractImg from '../assets/contract-bg.jpg';
+import ResumeImg from '../assets/AI-Resume_analyzer-image.png';
+
 const allProjects = [
   {
     title: "Leaf Disease Detector",
     description: "IBM Project for detecting leaf diseases.",
     tags: ["TypeScript", "AI", "React"],
-    image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Leaf+Disease+Detector",
+    image: LeafDiseaseImg,
     link: "https://leaf-disease-detector-one.vercel.app"
   },
   {
     title: "Contract Management Platform",
     description: "Task from UAE based company.",
     tags: ["JavaScript", "Web"],
-    image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Contract+Management",
+    image: ContractImg,
     link: "https://sidhanpoolakkal05.github.io/Contract-Management-Platform/"
   },
   {
     title: "AI Resume Analyzer",
     description: "IBM Internship project for analyzing resumes.",
     tags: ["JavaScript", "AI"],
-    image: "https://via.placeholder.com/400x250/020617/38bdf8?text=AI+Resume+Analyzer",
+    image: ResumeImg,
     link: "https://ai-resume-analyzer-dun-gamma.vercel.app"
   },
   {

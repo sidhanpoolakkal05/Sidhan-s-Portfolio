@@ -2,31 +2,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css';
 
+// Import project images
+import LeafDiseaseImg from '../assets/Leaf-disease-image.png';
+import ContractImg from '../assets/contract-bg.jpg';
+import ResumeImg from '../assets/AI-Resume_analyzer-image.png';
+
 const Projects = () => {
   const projects = [
     {
-      image: "sidhan_portfolio\src\assets\Leaf-disease-image.png",
+      image: LeafDiseaseImg,
       title: "Leaf Disease Detector",
       description: "IBM Project for detecting leaf diseases.",
       tech: ["TypeScript", "React", "AI"],
       link: "https://leaf-disease-detector-one.vercel.app"
     },
     {
-      image: "sidhan_portfolio\src\assets\contract-bg.jpg",
+      image: ContractImg,
       title: "Contract Management Platform",
       description: "Task from UAE based company.",
       tech: ["JavaScript", "React"],
       link: "https://sidhanpoolakkal05.github.io/Contract-Management-Platform/"
     },
     {
-      image: "E:\study material\PROJECTS\sidhan_portfolio\src\assets\AI-Resume_analyzer-image.png",
+      image: ResumeImg,
       title: "AI Resume Analyzer",
       description: "IBM Internship project for analyzing resumes.",
       tech: ["JavaScript", "React", "AI"],
       link: "https://ai-resume-analyzer-dun-gamma.vercel.app"
     },
     {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Medical+Website",
+      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=HealthHive",
       title: "HealthHive - The Doctor Finder",
       description: "2nd year college project focused on finding doctors.",
       tech: ["HTML", "CSS", "JavaScript"],
