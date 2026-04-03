@@ -18,9 +18,10 @@
 }
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 12px;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .hero-content h3 {
@@ -107,30 +108,159 @@
 .hero-visual {
   flex: 1;
   position: relative;
-  height: 400px;
+  min-height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
+
+.hero-image-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: mainFloat 6s ease-in-out infinite;
+}
+
+@keyframes mainFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.image-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+  position: relative;
+  z-index: 5;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover .hero-img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(56, 189, 248, 0.5),
+    transparent
+  );
+  height: 50px;
+  opacity: 0.5;
+  animation: scan 4s linear infinite;
+  z-index: 6;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400px); }
+}
+
+.tech-ring {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.tech-ring.outer {
+  width: 140%;
+  height: 140%;
+  border: 1px dashed rgba(56, 189, 248, 0.3);
+  animation: rotateClockwise 25s linear infinite;
+}
+
+.tech-ring.mid {
+  width: 125%;
+  height: 125%;
+  border: 2px solid rgba(56, 189, 248, 0.1);
+  border-top: 2px solid rgba(56, 189, 248, 0.4);
+  border-bottom: 2px solid rgba(56, 189, 248, 0.4);
+  animation: rotateCounterClockwise 15s linear infinite;
+}
+
+.tech-ring.inner {
+  width: 110%;
+  height: 110%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.1);
+  animation: pulseIn 4s ease-in-out infinite;
+}
+
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounterClockwise {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulseIn {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.05); opacity: 0.6; }
+}
+
+.tech-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-color);
+  z-index: 10;
+  animation: cornerGlow 2s ease-in-out infinite;
+}
+
+@keyframes cornerGlow {
+  0%, 100% { opacity: 0.4; filter: blur(0px); }
+  50% { opacity: 1; filter: drop-shadow(0 0 5px var(--accent-color)); }
+}
+
+.tech-corner.tl { top: -15px; left: -15px; border-right: none; border-bottom: none; }
+.tech-corner.tr { top: -15px; right: -15px; border-left: none; border-bottom: none; }
+.tech-corner.bl { bottom: -15px; left: -15px; border-right: none; border-top: none; }
+.tech-corner.br { bottom: -15px; right: -15px; border-left: none; border-top: none; }
 
 .blob {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-  filter: blur(80px);
-  opacity: 0.4;
-  border-radius: 50%;
-  animation: float 10s infinite alternate;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+  filter: blur(120px);
+  opacity: 0.2;
+  z-index: 1;
+  animation: float 20s infinite alternate;
 }
 
 .blob-2 {
-  background: #f472b6;
-  width: 200px;
-  height: 200px;
-  right: 50px;
-  top: 50px;
-  animation-delay: -5s;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  width: 350px;
+  height: 350px;
+  right: -100px;
+  top: -100px;
+  animation-delay: -10s;
 }
 
 @keyframes float {
@@ -197,6 +327,7 @@
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    white-space: nowrap;
   }
 }

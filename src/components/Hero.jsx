@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import sidhanImg from '../assets/sidhan.jpg';
 
 const Hero = () => {
   return (
@@ -32,7 +33,19 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-visual fade-in delay-5">
-        {/* Abstract AI/Tech Visual */}
+        <div className="hero-image-wrapper">
+          <div className="tech-ring outer"></div>
+          <div className="tech-ring mid"></div>
+          <div className="tech-ring inner"></div>
+          <div className="image-frame glass">
+            <img src={sidhanImg} alt="Muhammad Sidhan P" className="hero-img" />
+            <div className="scan-line"></div>
+          </div>
+          <div className="tech-corner tl"></div>
+          <div className="tech-corner tr"></div>
+          <div className="tech-corner bl"></div>
+          <div className="tech-corner br"></div>
+        </div>
         <div className="blob blob-1"></div>
         <div className="blob blob-2"></div>
       </div>
