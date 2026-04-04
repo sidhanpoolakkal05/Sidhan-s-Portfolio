@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import profileImg from '../assets/proff_sidhan.png';
 
 const About = () => {
   return (
@@ -33,8 +34,11 @@ const About = () => {
             </div>
           </div>
           <div className="about-image">
-             <div className="image-placeholder glass">
-                <span>AI & Robotics Focus</span>
+             <div className="image-container glass">
+                <img src={profileImg} alt="Muhammad Sidhan P" className="profile-img" />
+                <div className="image-overlay">
+                  <span>AI & Robotics Focus</span>
+                </div>
              </div>
           </div>
         </div>
