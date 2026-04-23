@@ -10,12 +10,12 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm <strong>Muhammad Sidhan P</strong>, a dedicated <strong>AI Engineer & Full Stack Developer</strong> with a deep passion for building intelligent systems. 
+              I'm <strong>Muhammad Sidhan P</strong>, a dedicated <strong>AI Engineer & Full Stack Developer</strong> with a deep passion for building intelligent systems.
               As a self-taught developer, I've spent countless hours mastering the intricacies of Python, Deep Learning, and modern web technologies.
             </p>
             <p>
-              My journey began with a fascination for how tech can solve real-world problems. Today, I focus on bridging the gap between 
-              advanced AI models and user-friendly web applications. I thrive on challenges and am constantly exploring the realms of 
+              My journey began with a fascination for how tech can solve real-world problems. Today, I focus on bridging the gap between
+              advanced AI models and user-friendly web applications. I thrive on challenges and am constantly exploring the realms of
               <strong> Robotics, Machine Learning, and Scalable Architectures</strong>.
             </p>
             <div className="about-stats">
@@ -34,12 +34,12 @@ const About = () => {
             </div>
           </div>
           <div className="about-image">
-             <div className="image-container glass">
-                <img src={profileImg} alt="Muhammad Sidhan P" className="profile-img" />
-                <div className="image-overlay">
-                  <span>AI & Robotics Focus</span>
-                </div>
-             </div>
+            <div className="image-container glass">
+              <img src={profileImg} alt="Muhammad Sidhan P" className="profile-img" />
+              <div className="image-overlay">
+                {/* <span>AI & Machine Learning Focus</span> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>

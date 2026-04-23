@@ -5,8 +5,16 @@ import './AllProjectsPage.css';
 import LeafDiseaseImg from '../assets/Leaf-disease-image.png';
 import ContractImg from '../assets/contract-bg.jpg';
 import ResumeImg from '../assets/AI-Resume_analyzer-image.png';
+import WatchProjectImg from '../assets/watch-project.png';
 
 const allProjects = [
+  {
+    title: "Grand Seiko - Elite Watch Experience",
+    description: "A high-end, cinematic landing page featuring scroll-linked animations and immersive visual storytelling.",
+    tags: ["React", "GSAP", "Framer Motion", "Vite"],
+    image: WatchProjectImg,
+    link: "https://watch-animated-website.vercel.app"
+  },
   {
     title: "Leaf Disease Detector",
     description: "IBM Project for detecting leaf diseases.",
@@ -49,6 +57,7 @@ const allProjects = [
     image: "https://via.placeholder.com/400x250/020617/38bdf8?text=Project+2",
     link: "https://github.com/sidhanpoolakkal05/-project-2"
   }
+
 ];
 
 const AllProjectsPage = () => {

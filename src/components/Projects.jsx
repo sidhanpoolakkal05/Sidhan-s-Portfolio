@@ -6,9 +6,17 @@ import './Projects.css';
 import LeafDiseaseImg from '../assets/Leaf-disease-image.png';
 import ContractImg from '../assets/contract-bg.jpg';
 import ResumeImg from '../assets/AI-Resume_analyzer-image.png';
+import WatchProjectImg from '../assets/watch-project.png';
 
 const Projects = () => {
   const projects = [
+    {
+      image: WatchProjectImg,
+      title: "Grand Seiko - Elite Watch Experience",
+      description: "A high-end, cinematic landing page featuring scroll-linked animations and immersive visual storytelling.",
+      tech: ["React", "GSAP", "Framer Motion", "Vite"],
+      link: "https://watch-animated-website.vercel.app"
+    },
     {
       image: LeafDiseaseImg,
       title: "Leaf Disease Detector",
@@ -29,13 +37,6 @@ const Projects = () => {
       description: "IBM Internship project for analyzing resumes.",
       tech: ["JavaScript", "React", "AI"],
       link: "https://ai-resume-analyzer-dun-gamma.vercel.app"
-    },
-    {
-      image: "https://via.placeholder.com/400x250/020617/38bdf8?text=HealthHive",
-      title: "HealthHive - The Doctor Finder",
-      description: "2nd year college project focused on finding doctors.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "https://sidhanpoolakkal05.github.io/Medical-Website/"
     }
   ];
 
