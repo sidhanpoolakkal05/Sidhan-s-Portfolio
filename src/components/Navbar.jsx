@@ -26,6 +26,7 @@ const Navbar = () => {
           <li>{isHome ? <a href="#home">Home</a> : <Link to="/">Home</Link>}</li>
           <li>{isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}</li>
           <li>{isHome ? <a href="#skills">Skills</a> : <Link to="/#skills">Skills</Link>}</li>
+          <li>{isHome ? <a href="#certifications">Certifications</a> : <Link to="/#certifications">Certifications</Link>}</li>
           <li><Link to="/projects">Projects</Link></li>
           <li>{isHome ? <a href="#contact">Contact</a> : <Link to="/#contact">Contact</Link>}</li>
         </ul>
