@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -14,7 +15,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
+
   const isHome = location.pathname === '/';
+
+  const getLink = (href, label, external) => (
+    <li onClick={() => setMenuOpen(false)}>
+      {external ? <a href={href}>{label}</a> : <Link to={href}>{label}</Link>}
+    </li>
+  );
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -22,14 +33,38 @@ const Navbar = () => {
         <Link to="/" className="logo">
           <span className="text-gradient">Sidhan.</span>
         </Link>
-        <ul className="nav-links">
-          <li>{isHome ? <a href="#home">Home</a> : <Link to="/">Home</Link>}</li>
-          <li>{isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}</li>
-          <li>{isHome ? <a href="#skills">Skills</a> : <Link to="/#skills">Skills</Link>}</li>
-          <li>{isHome ? <a href="#certifications">Certifications</a> : <Link to="/#certifications">Certifications</Link>}</li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li>{isHome ? <a href="#contact">Contact</a> : <Link to="/#contact">Contact</Link>}</li>
+
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#home">Home</a> : <Link to="/">Home</Link>}
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#about">About</a> : <Link to="/#about">About</Link>}
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#skills">Skills</a> : <Link to="/#skills">Skills</Link>}
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#certifications">Certifications</a> : <Link to="/#certifications">Certifications</Link>}
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#projects">Projects</a> : <Link to="/#projects">Projects</Link>}
+          </li>
+          <li onClick={() => setMenuOpen(false)}>
+            {isHome ? <a href="#contact">Contact</a> : <Link to="/#contact">Contact</Link>}
+          </li>
         </ul>
+
+        <button
+          className={`hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </nav>
   );
